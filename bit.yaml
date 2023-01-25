@@ -1,0 +1,7 @@
+tunnel: bfece923-2fa4-4de0-a9a1-145308510ae1
+credentials-file: /root/.cloudflared/bfece923-2fa4-4de0-a9a1-145308510ae1.json
+
+ingress:
+  - hostname: bit.lvbyte.top
+    service: http://localhost:5244
+  - service: http_status:404
