@@ -30,7 +30,7 @@ jobs:
         curl -X PUT "https://registry.npmmirror.com/lvbyte-cdn/sync?publish=false&nodeps=false"
         
     - name: Install dependencies
-      run: npm i semantic-release
+      run: npm i semantic-release && npm install @semantic-release/changelog -D && npm install @semantic-release/git -D
       env: 
         INPUT_TOKEN: ''
     - name: Release
