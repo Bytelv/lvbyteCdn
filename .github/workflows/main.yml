@@ -28,3 +28,14 @@ jobs:
     - name: Refresh NPM Cache
       run: >
         curl -X PUT "https://registry.npmmirror.com/lvbyte-cdn/sync?publish=false&nodeps=false"
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM }}
+      run: npx semantic-release
+      
+      
