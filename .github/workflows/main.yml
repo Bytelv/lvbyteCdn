@@ -15,10 +15,10 @@ jobs:
       with: # 条件
         submodules: true # Checkout private submodules(themes or something else). 当有子模块时切换分支？
     # 2. 配置环境
-    - name: Setup Node.js 16.10.0
+    - name: Setup Node.js 12.10.0
       uses: actions/setup-node@master
       with:
-        node-version: "16.10.0"
+        node-version: "12.10.0"
                 
     - name: npm publish
       uses: JS-DevTools/npm-publish@v1
