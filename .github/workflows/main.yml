@@ -31,7 +31,8 @@ jobs:
         
     - name: Install dependencies
       run: npm i semantic-release
-      
+      env: 
+        INPUT_TOKEN: ''
     - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
