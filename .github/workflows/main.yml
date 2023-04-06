@@ -33,5 +33,9 @@ jobs:
       run: >
         curl -X PUT "https://registry.npmmirror.com/lvbyte-cdn/sync?publish=false&nodeps=false"
         
-
+    - name: Push
+      run: |
+        git add -A
+        git commit -m "Publish"
+        git push origin main
       
