@@ -20,10 +20,14 @@ jobs:
       with:
         node-version: "12.10.0"
                 
-    - name: npm publish
-      uses: JS-DevTools/npm-publish@v1
-      with:
-        token: ${{ secrets.NPM }}
+    - name: Publish Package
+      run: |
+        git config --global user.email "2015078351@qq.com"
+        git config --global user.name "Bytelv"
+        npm version patch
+        npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.NPM}}
         
     - name: Refresh NPM Cache
       run: >
