@@ -6,7 +6,7 @@ const md5 = require("js-md5");
 const fs = require("fs");
 
 const getVersion = async() => {
-    const latestVersion = await fetch("https://registry.npmjs.org/lvbytecdn/latest").then(res => res.json()).then(res => {
+    const latestVersion = await fetch("https://registry.npmjs.org/lvbyte-cdn/latest").then(res => res.json()).then(res => {
         return res.version;
     })
     return latestVersion;
